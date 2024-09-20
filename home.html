@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main class="flex justify-center mt-10">
+      <div class="mockup-phone">
+        <div class="camera"></div>
+        <div class="display">
+          <div class="artboard artboard-demo phone-1">
+            <!-- stat of money -->
+            <div class="stats shadow">
+              <div class="stat">
+                <div id="account-balance" class="stat-value">9400</div>
+                <div class="stat-desc">Available Balance</div>
+              </div>
+            </div>
+            <!-- stat money end -->
+            <div class="divider"></div>
+            <!-- buttons start -->
+            <div>
+              <button id="add-btn" class="btn btn-lg btn-accent">Add money</button>
+              <button id="withdraw-btn" class="btn btn-lg btn-warning">Withdraw</button>
+            </div>
+            <!-- buttons ends -->
+            <button class="divider"></button>
+            <!-- add money start -->
+            <div id="add-money-form" class="card bg-base-100 w-[85%] max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Amount</span>
+                  </label>
+                  <input
+                    id="add-amount-field"
+                    type="text"
+                    placeholder="Amount"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pin</span>
+                  </label>
+                  <input
+                    id="pin-number-field"
+                    type="password"
+                    placeholder="pin number"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="add-money-btn" class="btn btn-accent">Add money</button>
+                </div>
+              </form>
+            </div>
+            <!-- add money end -->
+             <!-- cash out starts -->
+             <div id="withdraw-money-form" class="hidden card bg-base-100 w-[85%] max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Amount</span>
+                    </label>
+                    <input
+                      id="withdraw-amount-field"
+                      type="text"
+                      placeholder="Cash out Amount"
+                      class="input input-bordered"
+                      required
+                    />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Pin</span>
+                    </label>
+                    <input
+                      id="withdraw-pin-number-field"
+                      type="password"
+                      placeholder="pin number"
+                      class="input input-bordered"
+                      required
+                    />
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="withdraw-money-btn" class="btn btn-primary btn-warning">Withdraw</button>
+                  </div>
+                </form>
+              </div>
+             <!-- cash out ends -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/home.js"></script>
+    <script src="./js/withdraw.js"></script>
+    <script src="./js/features.js"></script>
+  </body>
+</html>
